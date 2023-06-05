@@ -4,14 +4,20 @@
   "description": "www.saucedemo.com automation for demo",
   "main": "index.js",
   "scripts": {
-    "e2e-test": "nightwatch"
+    "e2e-test": "nightwatch",
+    "api-test": "mocha $(find testAPI -name '*.js')"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^9.1.2",
+    "chai": "^4.3.7",
     "chromedriver": "^108.0.0",
-    "nightwatch": "^2.6.21"
+    "cucumber-pretty": "^6.0.1",
+    "mocha": "^10.2.0",
+    "nightwatch": "^2.6.21",
+    "supertest": "^6.3.3"
   }
 }
+

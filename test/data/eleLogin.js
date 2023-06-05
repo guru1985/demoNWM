@@ -1,4 +1,5 @@
-module.exports = {
+module.exports = 
+{
     Login:
     {
         url: 'https://www.saucedemo.com',
@@ -37,22 +38,19 @@ module.exports = {
 
     },
 
-CheckoutInfoAndFinish:
-{
-    titleCheckout: 'div[class="header_secondary_container"] > span.title',
-    paymentInfoLabel: 'div[class="summary_info_label"]',
-    paymentInfoValue: 'div[class="summary_value_label"]',
-    shippingInfoLabel: 'div[class="summary_info_label"]:nth-child(3)',
-    shippingInfoValue: 'div[class="summary_value_label"]:nth-child(4)',
-    priceTotalLabel: 'div[class="summary_info_label"]:nth-child(5)',
-    priceSummary: 'div[class="summary_subtotal_label"]',
-    taxSummary: 'div[class="summary_tax_label"]',
-    total: 'div[class="summary_info_label summary_total_label"]',
-    finish: '#finish',
-    OnsieValue: 'div[class="inventory_item_price"]:nth-child(1)',
-    BikeLightprice: 'div[class="cart_item"]:nth-child(4)> div.cart_item_label>div.item_pricebar>div.inventory_item_price'
-
-
-}
-
+    CheckoutInfoAndFinish:
+    {
+        titleCheckout: 'div[class="header_secondary_container"] > span.title',
+        paymentInfoLabel: 'div[class="summary_info_label"]',
+        paymentInfoValue: 'div[class="summary_value_label"]',
+        shippingInfoLabel: 'div[class="summary_info_label"]:nth-child(3)',
+        shippingInfoValue: 'div[class="summary_value_label"]:nth-child(4)',
+        priceTotalLabel: 'div[class="summary_info_label"]:nth-child(5)',
+        priceSummary: 'div[class="summary_subtotal_label"]',
+        taxSummary: 'div[class="summary_tax_label"]',
+        total: 'div[class="summary_info_label summary_total_label"]',
+        finish: '#finish',
+        OnsieValue: 'div[class="inventory_item_price"]:nth-child(1)',
+        BikeLightprice: 'div[class="cart_item"]:nth-child(4)> div.cart_item_label>div.item_pricebar>div.inventory_item_price'
+    }
 }
