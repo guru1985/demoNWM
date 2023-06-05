@@ -113,7 +113,7 @@ describe("API test Automation using Supertest", ()=>{
 
     it("Test associated number of posts for an user", function(){
         
-         return apibase.get('/users')
+        apibase.get('/users')
         .set("Accept", "application/json")
         .then((response)=>{
           respBodyUsers = response.body;
@@ -125,7 +125,7 @@ describe("API test Automation using Supertest", ()=>{
             user_name = respBodyUsers[i]['username'];
             user_email = respBodyUsers[i]['email'];
             console.log(user_id + '  ' + user_name);
-            apibase
+            return apibase
               .get('/posts?userId=' + user_id)
               .set("Accept", "application/json")
               .then((responsePosts) => {
