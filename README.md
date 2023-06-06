@@ -1,11 +1,6 @@
 # demoNWM
-www.saucedemo.com automation for demo
-
-,
-  "dependencies": {
-    "@cucumber/cucumber-expressions": "^16.1.2",
-    "@cucumber/pretty-formatter": "^1.0.0"
-  }
+www.saucedemo.com UI automation for demo
+"http://jsonplaceholder.typicode.com" API Automation for demo
 
 1. Clone the Repo
 2. Install Node (v18.16.0)
