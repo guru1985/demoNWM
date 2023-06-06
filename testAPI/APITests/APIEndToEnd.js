@@ -4,6 +4,9 @@ const request = require('supertest');
 const expect = require('chai');
 const should = require('chai');
 const assert = require('chai');
+const postDetails = require('./posts.json');
+const putDetails = require('./put.json');
+
 
 var JSONResp;
 var apibase = request(base_url);
@@ -45,4 +48,56 @@ describe("End To End test to check number of photos in an album", ()=>{
             }
             });
         });
+
+        it("Post a new entry in posts ", function(){
+        
+            apibase.post('/posts')
+            .send(postDetails)
+            .set("Accept","application/json")
+            .set("Content-Type","application/json")
+            .then(function(err,res){
+              // console.log(postDetails.userId)
+            //   respBody = JSON.parse(res.text);
+              // console.log(respBody['userId'])
+              expect(res.statusCode).to.be.equal(201);
+              
+              if(err){
+                throw err
+              }
+            })
+          });
+
+          it("Put the new entry in posts ", function(){
+        
+            apibase.put('/posts/10')
+            .send(putDetails)
+            .set("Accept","application/json")
+            .set("Content-Type","application/json")
+            .then(function(err,res){
+              // console.log(postDetails.userId)
+            //   respBody = JSON.parse(res.text);
+              // console.log(respBody['userId'])
+              expect(res.statusCode).to.be.equal(200);
+              
+              if(err){
+                throw err
+              }
+            })
+          });
+
+          it("Delete the entry in posts ", function(){
+        
+            apibase.delete('/posts/10')
+            .set("Accept","application/json")
+            .then(function(err,res){
+              // console.log(postDetails.userId)
+            //   respBody = JSON.parse(res.text);
+              // console.log(respBody['userId'])
+              expect(res.statusCode).to.be.equal(200);
+              
+              if(err){
+                throw err
+              }
+            })
+          });
       });

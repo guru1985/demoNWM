@@ -1,0 +1,24 @@
+
+{
+    "id": 11,
+    "name": "Guru B",
+    "username": "Guru",
+    "email": "Guru@Sep.test",
+    "address": {
+        "street": "Its Light",
+        "suite": "Apt. 556",
+        "city": "Livable",
+        "zipcode": "00043-6543",
+        "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+        }
+    },
+    "phone": "000-9876-876",
+    "website": "testdemo.test",
+    "company": {
+        "name": "Demo",
+        "catchPhrase": "testuser",
+        "bs": "its a test user"
+    }
+}

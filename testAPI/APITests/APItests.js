@@ -2,12 +2,14 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const base_url = "http://jsonplaceholder.typicode.com";
 const request = require('supertest');
-const expect = require('chai');
+const expect = require('chai').expect;
 const should = require('chai');
 const assert = require('chai');
+const userdetails = require('./user.json');
 
 var JSONResp;
 var apibase = request(base_url);
+// var expect = chai.expect;
 
 
 describe("API test Automation using Supertest", ()=>{
@@ -109,33 +111,10 @@ describe("API test Automation using Supertest", ()=>{
         });
       });
 
-    //   get the list of user ids and figure out how many posts albums and todos are present for each user
+      
+      
+      
 
-    it("Test associated number of posts for an user", function(){
-        
-        apibase.get('/users')
-        .set("Accept", "application/json")
-        .then((response)=>{
-          respBodyUsers = response.body;
-          respBodyUsersLn = respBodyUsers.length;
-          // console.log(respBodyUsersLn)
-          for (i = 0; i < respBodyUsersLn; i++) {
-            // console.log(i);
-            user_id = respBodyUsers[i]['id'];
-            user_name = respBodyUsers[i]['username'];
-            user_email = respBodyUsers[i]['email'];
-            console.log(user_id + '  ' + user_name);
-            return apibase
-              .get('/posts?userId=' + user_id)
-              .set("Accept", "application/json")
-              .then((responsePosts) => {
-              respBodyPosts = responsePosts.body;
-            // console.log(respBodyPosts)
-              respBodyPostsLn = respBodyPosts.length;
-              console.log('User ID ' + user_id + ' whose user name is '
-              + user_name + ' and email ' + user_email + ' has posted ' + respBodyPostsLn + ' comments')
-              })
-            }
-        })
-      }); 
+
+    
     });     

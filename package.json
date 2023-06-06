@@ -18,6 +18,8 @@
     "mocha": "^10.2.0",
     "nightwatch": "^2.6.21",
     "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "jenkins": "^0.28.0"
   }
 }
-
